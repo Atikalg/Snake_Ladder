@@ -1,7 +1,7 @@
 package com.bridgelab.Assignment4.SnakeLadder;
 /**
  * @author atik
- * Ensure the player gets to exact winning  position 100
+ *  position of player and dice role
 */
 public class SnakeLadder {
 	
@@ -11,16 +11,19 @@ public class SnakeLadder {
 	private static final int maxPosition = 100;
 	private static final int minPosition = 0;
 	
+	
 	public static void main(String[] args) {
-		System.out.println("Welcome to SNAKES AND LADDERS GAME!!");		
+		
+		System.out.println("Welcome to SNAKES AND LADDERS GAME!!");
+		
 		int positionA = 0;
+		int diceCount = 0;
 		
 		while(positionA < maxPosition) {
 			
 			int dice = (int) (Math.floor(Math.random() * 6) + 1);
-			System.out.println("dice : "+dice);
-			int checkPlay = (int) Math.floor(Math.random()*10)%3;
-			System.out.println("checkplay : "+checkPlay);
+			diceCount ++;
+			int checkPlay = (int) Math.floor(Math.random() * 10) % 3;
 			
 			switch(checkPlay) {
 				case noPlay: 
@@ -32,7 +35,7 @@ public class SnakeLadder {
 						positionA = positionA-dice;
 					}
 					break;
-
+				
 				case snake: 
 					positionA -= dice;
 					if(positionA < minPosition ) {
@@ -40,8 +43,9 @@ public class SnakeLadder {
 					}
 					break;
 			}
-			System.out.println("end : "+positionA);
-		}
+			System.out.println("Position after Die Roll "+diceCount+" : "+positionA);
+		}	
+		System.out.println("Total Dice Rolls : "+diceCount);
 	}
 	}
 
