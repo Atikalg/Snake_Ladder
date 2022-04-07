@@ -1,14 +1,14 @@
 package com.bridgelab.Assignment4.SnakeLadder;
-
 /**
  * @author atik
- * Welcome message and start position is 0
+ * Generate randome dice number
  */
 public class SnakeLadder {
 	public static void main(String[] args) {
-		
-		System.out.println("Welcome to SNAKES AND LADDERS GAME!!");
-		
-		int startPositionA = 0;
+			System.out.println("Welcome to SNAKES AND LADDERS GAME!!");
+			
+			int startPositionA = 0;
+			int dice = (int) (Math.floor(Math.random() * 6) + 1);
+		}
 	}
-	}
+	
